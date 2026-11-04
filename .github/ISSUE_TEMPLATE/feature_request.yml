@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest an idea for the kit
+title: "[Feature]: "
+labels: ["enhancement"]
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the idea!
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One line is enough.
+      placeholder: A short summary
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should it do?
+      render: markdown
+  - type: dropdown
+    id: formats
+    attributes:
+      label: Formats
+      multiple: true
+      options:
+        - SVG
+        - PNG
+        - PDF
+      default: 1
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched the existing issues
+          required: true
+        - label: I can help build it
